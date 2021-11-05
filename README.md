@@ -59,7 +59,7 @@ The paramater of each validator (if it has) can be accessible in the template wi
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [gt]="10">
 <!-- Will display : error message and must be greater than 10 -->
-<p *ngIf="field.errors?.gt">error message and must be greater than {{ field.errors?.reason }}</p>
+<p *ngIf="field.errors?.['gt']">error message and must be greater than {{ field.errors?.reason }}</p>
 ``` 
 
 ## Template driven
@@ -87,150 +87,150 @@ export class AppModule {
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [rangeLength]="[5, 9]">
-<p *ngIf="field.errors?.rangeLength">error message</p>
+<p *ngIf="field.errors?.['rangeLength']">error message</p>
 ```
 
 ### min
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [min]="10">
-<p *ngIf="field.errors?.min">error message</p>
+<p *ngIf="field.errors?.['min']">error message</p>
 ```
 
 ### greater than - gt
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [gt]="10">
-<p *ngIf="field.errors?.gt">error message</p>
+<p *ngIf="field.errors?.['gt']">error message</p>
 ```
 
 ### greater than or equal - gte
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [gte]="10">
-<p *ngIf="field.errors?.gte">error message</p>
+<p *ngIf="field.errors?.['gte']">error message</p>
 ```
 
 ### max
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [max]="20">
-<p *ngIf="field.errors?.max">error message</p>
+<p *ngIf="field.errors?.['max']">error message</p>
 ```
 
 ### less than - lt
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [lt]="20">
-<p *ngIf="field.errors?.lt">error message</p>
+<p *ngIf="field.errors?.['lt']">error message</p>
 ```
 
 ### less than or equal - lte
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [lte]="20">
-<p *ngIf="field.errors?.lte">error message</p>
+<p *ngIf="field.errors?.['lte']">error message</p>
 ```
 
 ### range
 
 ```html
 <input type="number" [(ngModel)]="model.field" name="field" #field="ngModel" [range]="[10, 20]">
-<p *ngIf="field.errors?.range">error message</p>
+<p *ngIf="field.errors?.['range']">error message</p>
 ```
 
 ### digits
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" digits>
-<p *ngIf="field.errors?.digits">error message</p>
+<p *ngIf="field.errors?.['digits']">error message</p>
 ```
 
 ### number
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" number>
-<p *ngIf="field.errors?.number">error message</p>
+<p *ngIf="field.errors?.['number']">error message</p>
 ```
 
 ### url
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" url>
-<p *ngIf="field.errors?.url">error message</p>
+<p *ngIf="field.errors?.['url']">error message</p>
 ```
 
 ### email
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" ngvemail>
-<p *ngIf="field.errors?.email">error message</p>
+<p *ngIf="field.errors?.['email']">error message</p>
 ```
 
 ### date
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" date>
-<p *ngIf="field.errors?.date">error message</p>
+<p *ngIf="field.errors?.['date']">error message</p>
 ```
 
 ### min date - minDate
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" minDate="2016-09-09">
-<p *ngIf="field.errors?.minDate">error message</p>
+<p *ngIf="field.errors?.['minDate']">error message</p>
 ```
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [minDate]="myOtherField">
-<p *ngIf="field.errors?.minDate">error message</p>
+<p *ngIf="field.errors?.['minDate']">error message</p>
 ```
 
 ### max date - maxDate
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" maxDate="2016-09-09">
-<p *ngIf="field.errors?.maxDate">error message</p>
+<p *ngIf="field.errors?.['maxDate']">error message</p>
 ```
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [maxDate]="myOtherField">
-<p *ngIf="field.errors?.maxDate">error message</p>
+<p *ngIf="field.errors?.['maxDate']">error message</p>
 ```
 
 ### date ISO - dateISO
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" dateISO>
-<p *ngIf="field.errors?.dateISO">error message</p>
+<p *ngIf="field.errors?.['dateISO']">error message</p>
 ```
 
 ### credit card - creditCard
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" creditCard>
-<p *ngIf="field.errors?.creditCard">error message</p>
+<p *ngIf="field.errors?.['creditCard']">error message</p>
 ```
 
 ### json
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" json>
-<p *ngIf="field.errors?.json">error message</p>
+<p *ngIf="field.errors?.['json']">error message</p>
 ```
 
 ### base64
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" base64>
-<p *ngIf="field.errors?.base64">error message</p>
+<p *ngIf="field.errors?.['base64']">error message</p>
 ```
 
 ### uuid
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [uuid]="'all'">
-<p *ngIf="field.errors?.uuid">error message</p>
+<p *ngIf="field.errors?.['uuid']">error message</p>
 ```
 
 *default*: all
@@ -246,32 +246,32 @@ export class AppModule {
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [equal]="'xxx'">
-<p *ngIf="field.errors?.equal">error message</p>
+<p *ngIf="field.errors?.['equal']">error message</p>
 ```
 
 ### not equal - notEqual
 
 ```html
 <input type="text" [(ngModel)]="model.field" name="field" #field="ngModel" [notEqual]="'xxx'">
-<p *ngIf="field.errors?.notEqual">error message</p>
+<p *ngIf="field.errors?.['notEqual']">error message</p>
 ```
 
 ### equal to - equalTo
 
 ```html
 <input type="password" ngModel name="password" #password="ngModel" required>
-<p *ngIf="password.errors?.required">required error</p>
+<p *ngIf="password.errors?.['required']">required error</p>
 <input type="password" ngModel name="certainPassword" #certainPassword="ngModel" [equalTo]="password">
-<p *ngIf="certainPassword.errors?.equalTo">equalTo error</p>
+<p *ngIf="certainPassword.errors?.['equalTo']">equalTo error</p>
 ```
 
 ### not equal to - notEqualTo
 
 ```html
 <input type="text" ngModel name="password" #password="ngModel" required>
-<p *ngIf="password.errors?.required">required error</p>
+<p *ngIf="password.errors?.['required']">required error</p>
 <input type="password" ngModel name="certainPassword" #certainPassword="ngModel" [notEqualTo]="password">
-<p *ngIf="certainPassword.errors?.equalTo">equalTo error</p>
+<p *ngIf="certainPassword.errors?.['equalTo']">equalTo error</p>
 ```
 
 ### property
@@ -285,7 +285,7 @@ public obj = { name: 'baguette' } // KO
 <input type="text" ngModel name="obj" #obj="ngModel" property="id">
 <!-- For multiple properties check -->
 <input type="text" ngModel name="obj" #obj="ngModel" property="id,value,name">
-<p *ngIf="obj.errors?.property">property error</p>
+<p *ngIf="obj.errors?.['property']">property error</p>
 ```
 
 ### array length - ArrayLength
@@ -343,7 +343,7 @@ export class AppComponent {
 
 ```html
 <input type="text" formControlName="field">
-<p *ngIf="demoForm.from.controls.field.errors?.rangeLength">error message</p>
+<p *ngIf="demoForm.from.controls.field.errors?.['rangeLength']">error message</p>
 ```
 
 ### range length - rangeLenght
