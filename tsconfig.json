@@ -5,22 +5,117 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "es2020",
+    "module": "es2015",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    ],
+    "paths": {
+      "@narik/core": [
+        "dist/core"
+      ],
+      "@narik/core/*": [
+        "dist/core/*"
+      ],
+      "@narik/common": [
+        "dist/common"
+      ],
+      "@narik/common/*": [
+        "dist/common/*"
+      ],
+      "@narik/app-core": [
+        "dist/app-core"
+      ],
+      "@narik/app-core/*": [
+        "dist/app-core/*"
+      ],
+      "@narik/infrastructure": [
+        "dist/infrastructure"
+      ],
+      "@narik/infrastructure/*": [
+        "dist/infrastructure/*"
+      ],
+      "@narik/ui-core": [
+        "dist/ui-core"
+      ],
+      "@narik/ui-core/*": [
+        "dist/ui-core/*"
+      ],
+      "@narik/ui-material": [
+        "dist/ui-material"
+      ],
+      "@narik/ui-material/*": [
+        "dist/ui-material/*"
+      ],
+      "@narik/ui-primeng": [
+        "dist/ui-primeng"
+      ],
+      "@narik/ui-primeng/*": [
+        "dist/ui-primeng/*"
+      ],
+      "@narik/ui-ng-bootstrap": [
+        "dist/ui-ng-bootstrap"
+      ],
+      "@narik/ui-ng-bootstrap/*": [
+        "dist/ui-ng-bootstrap/*"
+      ],
+      "@narik/ui-devextreme": [
+        "dist/ui-devextreme"
+      ],
+      "@narik/ui-devextreme/*": [
+        "dist/ui-devextreme/*"
+      ],
+      "@narik/jwt-authentication": [
+        "dist/jwt-authentication"
+      ],
+      "@narik/jwt-authentication/*": [
+        "dist/jwt-authentication/*"
+      ],
+      "@narik/client-storage": [
+        "dist/client-storage"
+      ],
+      "@narik/client-storage/*": [
+        "dist/client-storage/*"
+      ],
+      "@narik/signalr-client": [
+        "dist/signalr-client"
+      ],
+      "@narik/signalr-client/*": [
+        "dist/signalr-client/*"
+      ],
+      "@narik/ui-ngx-bootstrap": [
+        "dist/ui-ngx-bootstrap"
+      ],
+      "@narik/ui-ngx-bootstrap/*": [
+        "dist/ui-ngx-bootstrap/*"
+      ],
+      "@narik/ui-swimlane": [
+        "dist/ui-swimlane"
+      ],
+      "@narik/ui-swimlane/*": [
+        "dist/ui-swimlane/*"
+      ],
+      "@narik/ui-nebular": [
+        "dist/ui-nebular"
+      ],
+      "@narik/ui-nebular/*": [
+        "dist/ui-nebular/*"
+      ],
+      "@narik/custom-validators": [
+        "dist/custom-validators/custom-validators",
+        "dist/custom-validators"
+      ],
+      "@narik/firebase": [
+        "dist/firebase/narik-firebase",
+        "dist/firebase"
+      ]
+    }
   }
 }

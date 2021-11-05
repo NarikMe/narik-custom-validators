@@ -6,13 +6,14 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
+/.angular
 
 # dependencies
 /node_modules
 
 # profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
+chrome-profiler-events.json
+speed-measure-plugin.json
 
 # IDEs and editors
 /.idea
@@ -25,6 +26,7 @@ speed-measure-plugin*.json
 
 # IDE - VSCode
 .vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -36,7 +38,6 @@ speed-measure-plugin*.json
 /connect.lock
 /coverage
 /libpeerconnection.log
-debug.log
 npm-debug.log
 yarn-error.log
 testem.log
@@ -45,3 +46,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+package-lock.json
+
+/package-lock.json
+/documentation

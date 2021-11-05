@@ -1,0 +1,28 @@
+{
+  "name": "@narik/custom-validators",
+  "version": "7.0.0",
+  "peerDependencies": {
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "@angular/forms": "^13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NarikMe/narik-custom-validators"
+  },
+  "homepage": "http://narik.me",
+  "license": "MIT",
+  "description": "Framework to create angular application",
+  "keywords": [
+    "angular",
+    "Narik",
+    "validators",
+    "validation"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  }
+}

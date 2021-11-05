@@ -126,4 +126,4 @@ const CustomDirectives = [
   declarations: [CustomDirectives],
   exports: [CustomDirectives]
 })
-export class CustomFormsModule { }
+export class NarikCustomValidatorsModule { }
