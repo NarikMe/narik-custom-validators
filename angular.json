@@ -35,5 +35,7 @@
       }
     }
   },
-  "defaultProject": "narik-custom-validators"
+  "cli": {
+    "analytics": false
+  }
 }
