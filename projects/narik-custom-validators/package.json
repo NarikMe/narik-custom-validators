@@ -1,13 +1,13 @@
 {
   "name": "@narik/custom-validators",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@angular/forms": "^15.0.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/forms": "^16.0.0"
   },
   "dependencies": {
-    "tslib": "^2.1.0"
+    "tslib": "^2.4.0"
   },
   "repository": {
     "type": "git",
