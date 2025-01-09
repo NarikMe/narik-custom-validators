@@ -1,44 +1,58 @@
-import { Directive, Input, forwardRef, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { NG_VALIDATORS, Validator, ValidatorFn, AbstractControl } from '@angular/forms';
+import {
+    Directive,
+    Input,
+    forwardRef,
+    OnInit,
+    OnChanges,
+    SimpleChanges,
+} from '@angular/core';
+import {
+    NG_VALIDATORS,
+    Validator,
+    ValidatorFn,
+    AbstractControl,
+} from '@angular/forms';
 
 import { notMatching } from './validator';
 
 const NOT_MATCHING_VALIDATOR: any = {
-  provide: NG_VALIDATORS,
-  useExisting: forwardRef(() => NotMatchingValidator),
-  multi: true
+    provide: NG_VALIDATORS,
+    useExisting: forwardRef(() => NotMatchingValidator),
+    multi: true,
 };
 
 @Directive({
-  selector: '[notMatching][formControlName],[notMatching][formControl],[notMatching][ngModel]',
-  providers: [NOT_MATCHING_VALIDATOR]
+    selector:
+        '[notMatching][formControlName],[notMatching][formControl],[notMatching][ngModel]',
+    standalone: false,
+    providers: [NOT_MATCHING_VALIDATOR],
 })
 export class NotMatchingValidator implements Validator, OnInit, OnChanges {
-  @Input() notMatching: string | RegExp;
+    @Input() notMatching: string | RegExp;
 
-  private validator: ValidatorFn;
-  private onChange: () => void;
+    private validator: ValidatorFn;
+    private onChange: () => void;
 
-  ngOnInit() {
-    this.validator = notMatching(this.notMatching);
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    for (const key in changes) {
-      if (key === 'notMatching') {
-        this.validator = notMatching(changes[key].currentValue);
-        if (this.onChange) {
-          this.onChange();
-        }
-      }
+    ngOnInit() {
+        this.validator = notMatching(this.notMatching);
     }
-  }
 
-  validate(c: AbstractControl): {[key: string]: any} {
-    return this.validator(c);
-  }
+    ngOnChanges(changes: SimpleChanges) {
+        for (const key in changes) {
+            if (key === 'notMatching') {
+                this.validator = notMatching(changes[key].currentValue);
+                if (this.onChange) {
+                    this.onChange();
+                }
+            }
+        }
+    }
 
-  registerOnValidatorChange(fn: () => void): void {
-    this.onChange = fn;
-  }
+    validate(c: AbstractControl): { [key: string]: any } {
+        return this.validator(c);
+    }
+
+    registerOnValidatorChange(fn: () => void): void {
+        this.onChange = fn;
+    }
 }

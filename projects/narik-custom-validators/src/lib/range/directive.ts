@@ -23,6 +23,7 @@ const RANGE_VALIDATOR: any = {
 
 @Directive({
     selector: '[range][formControlName],[range][formControl],[range][ngModel]',
+    standalone: false,
     providers: [RANGE_VALIDATOR],
 })
 export class RangeValidator implements Validator, OnInit, OnChanges {
